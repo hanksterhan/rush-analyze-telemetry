@@ -1,0 +1,10 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/rush-plugin-manifest.schema.json",
+  "plugins": [
+    {
+      "pluginName": "rush-analyze-telemetry",
+      "description": "Adds a custom command \"rush analyze-telemetry\" that analyzes Rush telemetry files",
+      "commandLineJsonFilePath": "./command-line.json"
+    }
+  ]
+}

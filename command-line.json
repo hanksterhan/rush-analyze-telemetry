@@ -1,0 +1,34 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/command-line.schema.json",
+  "commands": [
+    {
+      "name": "analyze-telemetry",
+      "commandKind": "global",
+      "summary": "Rush plugin for analysis on Rush telemetry files",
+      "shellCommand": "node <packageFolder>/out/index.js",
+      "safeForSimultaneousRushProcesses": true
+    }
+  ],
+  "parameters": [
+      {
+          "parameterKind": "flag",
+          "longName": "--build-times",
+          "shortName": "-b",
+          "description": "Print build timing analysis by project given a telemetry file."
+      },
+      {
+          "parameterKind": "flag",
+          "longName": "--simulate",
+          "shortName": "-s",
+          "description": "Identify the optimal number of CPU cores to build your project."
+      },
+      {
+          "parameterKind": "string",
+          "longName": "--file",
+          "shortName": "-f",
+          "argumentName": "FILE",
+          "description": "Accepts a telemetry file that exists in the default telemetry file folder and runs the specified analysis function on the file.",
+          "required": true
+      }
+  ]
+}
