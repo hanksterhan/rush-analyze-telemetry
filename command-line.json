@@ -14,13 +14,15 @@
           "parameterKind": "flag",
           "longName": "--build-times",
           "shortName": "-b",
-          "description": "Print build timing analysis by project given a telemetry file."
+          "description": "Print build timing analysis by project given a telemetry file.",
+          "associatedCommands": ["analyze-telemetry"]
       },
       {
           "parameterKind": "flag",
           "longName": "--simulate",
           "shortName": "-s",
-          "description": "Identify the optimal number of CPU cores to build your project."
+          "description": "Identify the optimal number of CPU cores to build your project.",
+          "associatedCommands": ["analyze-telemetry"]
       },
       {
           "parameterKind": "string",
@@ -28,7 +30,9 @@
           "shortName": "-f",
           "argumentName": "FILE",
           "description": "Accepts a telemetry file that exists in the default telemetry file folder and runs the specified analysis function on the file.",
+          "associatedCommands": ["analyze-telemetry"],
           "required": true
+          
       }
   ]
 }
