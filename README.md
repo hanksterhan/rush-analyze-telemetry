@@ -4,7 +4,14 @@
 ```
 $ rush analyze-telemetry [-b] [-s] -f FILENAME
 
-Analyzes the provided Rush telemetry file to provide insight into the build timing data. The --build-times flag will identify the projects which are chokepoints during the build. Reducing the build times of these projects will directly reduce the overall build time by 1 second. The --simulate flag will identify the optimal number of CPU cores to build your project to help teams make more informed decisions about the number of CPU cores to use to build their project. Note that these functions only work on telemetry files produced by Rush version `^5.77.0`
+Analyzes the provided Rush telemetry file to provide insight into the build timing data. 
+The --build-times flag will identify the projects which are chokepoints during the build. 
+Reducing the build times of these projects will directly reduce the overall build time by 1 second. 
+The --simulate flag will identify the optimal number of CPU cores to build your project 
+to help teams make more informed decisions about the number of CPU cores to use to build 
+their project. 
+
+Note that these functions only work on telemetry files produced by Rush version `^5.77.0`
 
 Optional arguments:
 
