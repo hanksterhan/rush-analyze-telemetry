@@ -2,26 +2,28 @@
 
 ## Usage
 ```
-$ rush analyze-telemetry [-b] [-s] -f FILENAME
+$ npm install rush-analyze-telemetry
 
 Analyzes the provided Rush telemetry file to provide insight into the build timing data. 
-The --build-times flag will identify the projects which are chokepoints during the build. 
+The printProjectBuildTimes() function will identify the projects which are chokepoints during the build. 
 Reducing the build times of these projects will directly reduce the overall build time by 1 second. 
-The --simulate flag will identify the optimal number of CPU cores to build your project 
+The simulate() function will identify the optimal number of CPU cores to build your project 
 to help teams make more informed decisions about the number of CPU cores to use to build 
 their project. 
 
 Note that these functions only work on telemetry files produced by Rush version `^5.77.0`
 
-Optional arguments:
+Exported Functions:
 
--b, --build-times        Identifies the projects which are chokepoints during the build
--s, --simulate           Identifies the optimal number of CPU cores to build your project
+printProjectBuildTimes(file)        Identifies the projects which are chokepoints during the build
+simulate(file)                      Identifies the optimal number of CPU cores to build your project
+
+Where file is the full file path to the Rush telemetry file. 
 ```
 
-## Example Output
+## Example Output from Running the Functions:
 ```
-$ rush analyze-telemetry --build-times -f telemetry_timestamp.json
+$ printProjectBuildTimes(file)
 
 The original build took 68.04 seconds to build with 10 CPU Cores.
 
@@ -76,7 +78,7 @@ If the following project had a 0 second build time, then the total build time wi
   <-- retracted for sample output -->
 ```
 ```
-$ rush analyze-telemetry --simulate -f telemetry_timestamp.json
+$ simulate(file)
 
 The original build took 68.04 seconds to build with 10 CPU Cores.
 
